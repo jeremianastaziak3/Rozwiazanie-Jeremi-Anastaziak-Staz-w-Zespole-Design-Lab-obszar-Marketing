@@ -4,7 +4,7 @@ Projekt został wygenerowany przy użyciu [Angular CLI](https://github.com/angul
 
 ##
 W celu uruchomienia projektu wymagana jest instalacja [NodeJS](https://nodejs.org/en/).
-Dodatkowo należy zainstalować Angular CLI. Aby zainstalować Angular CLI - po zainstalowaniu NodeJS w wierszu poleceń wpisać: 
+Dodatkowo należy zainstalować Angular CLI - po zainstalowaniu NodeJS w wierszu poleceń proszę wpisać: 
 ```
 npm install -g @angular/cli;
 ```
