@@ -1,0 +1,34 @@
+<div 
+	#selectContainer 
+	*ngIf="select"
+	[ngClass]="{'select--active': select.active, 'select--valid': select.valid, 'select--disabled': disabled}"
+	class="select" 
+	>
+	<label class="select__label" for="month">Miesiąc</label>
+	<input 
+		[(ngModel)]="select.model" 
+		#month="ngModel"
+		(click)="onSelectClick($event)"
+		type="text" 
+		name="month"
+		class="select__input"
+		[disabled]="disabled"
+		readonly="true"
+		required
+	>
+	<span class="select__arrow"></span>
+
+	<div *ngIf="month.errors && (month.dirty || month.touched)" class="select__errors">
+    Wybierz miesiąc
+  </div>
+
+	<ul 
+		*ngIf="select.optionsActive" 
+		[@selectAnimation]="select.state" 
+		(@selectAnimation.done)="animationDone($event)" 
+		class="select__options"
+		>
+		<li *ngFor="let month of select.months" class="option" (click)="onMonthSelection(month)">{{month}}</li>
+	</ul>
+
+</div>
